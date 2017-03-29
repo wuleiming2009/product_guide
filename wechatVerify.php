@@ -10,7 +10,7 @@ $echostr = $_GET["echostr"];
 
 $result = false;
 
-$result = Daemon_wechatMod::initMsg($data);
+$result = Daemon_wechatMod::initMsg($signature, $timestamp, $nonce);
 
 if ($result) {
 	echo($echostr);
