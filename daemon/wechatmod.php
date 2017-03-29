@@ -28,7 +28,8 @@ class Daemon_wechatMod
      */
     public static function initMsg( $signature, $timestamp, $nonce ) {
 
-        $verifyArr = sort( array( self::$token, $timestamp, $nonce ));
+        $verifyArr = [ self::$token, $timestamp, $nonce ];
+        sort( $verifyArr, SORT_STRING );
         $verifyString = sha1($verifyArr);
 
         Daemon_Efuns::log_event("wechatVerify", "initMsg:$signature | $verifyString";
