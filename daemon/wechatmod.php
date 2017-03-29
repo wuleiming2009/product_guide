@@ -33,7 +33,7 @@ class Daemon_wechatMod
         $tempString = $verifyArr[0].$verifyArr[1].$verifyArr[2];
         $verifyString = sha1($tempString);
 
-        Daemon_Efuns::log_event("wechatVerify", "initMsg:$signature | $verifyString";
+        Daemon_Efuns::log_event("wechatVerify", "initMsg:$signature | $verifyString");
 
         if ( $verifyString == $signature) {
             return true;
