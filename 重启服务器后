@@ -1,0 +1,6 @@
+重启服务器后
+cd /usr/local/php/sbin/
+./php-fpm
+chmod 777 /var/run/php-fpm.sock
+cd /usr/local/nginx/sbin
+./nginx -c /usr/local/nginx/conf/nginx.conf
